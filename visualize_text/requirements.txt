@@ -1,2 +1,0 @@
-spacy-streamlit==0.1.0
-spacy==2.3.2
