@@ -31,8 +31,8 @@ def get_yfinance_data(ticker, start_date, end_date):
 
 # Add more error handling
 # when nothing is returned
-def get_filings(ticker):
-    filings_resp = get_ticker_filings("PKK:CNX", fromDate="2015-11-11", toDate="2020-11-11", limit=1000)
+def get_filings(ticker, start_date, end_date):
+    filings_resp = get_ticker_filings("PKK:CNX", fromDate=start_date, toDate=end_date, limit=1000)
     filings = filings_resp.get('filings')
     return filings
 
@@ -48,7 +48,7 @@ def get_matched_filings(filings):
     return matched_filings
 
 data = get_yfinance_data(ticker, start_date, end_date)
-filings = get_filings(webticker)
+filings = get_filings(webticker, start_date, end_date)
 matched_filings = get_matched_filings(filings)
 
 
