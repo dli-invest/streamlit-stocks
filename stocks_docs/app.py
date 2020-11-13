@@ -68,13 +68,11 @@ for filing_date in filings_fmt_dates:
   filings_df.loc[filing_date]['Close'] = data.loc[filing_date, 'Rolling']
 
 
-# filings_events = pd.DataFrame(filings_data_points, index=filings_date) 
-# filings_events.index = pd.to_datetime(filings_events.index)
-# print(filings_events)
 earnings_date = mpf.make_addplot(filings_df, type='scatter', markersize=200,marker='^',panel=1)
-fig, ax = mpf.plot(
+fig = mpf.plot(
     data,
-    addplot=earnings_date
+    addplot=earnings_date,
+    returnfig=True
 )
 
 st.pyplot(fig)
