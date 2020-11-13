@@ -29,6 +29,8 @@ def get_yfinance_data(ticker, start_date, end_date):
     data = yf.download(ticker, start_date, end_date)
     return data
 
+# Add more error handling
+# when nothing is returned
 def get_filings(ticker):
     filings_resp = get_ticker_filings("PKK:CNX", fromDate="2015-11-11", toDate="2020-11-11", limit=1000)
     filings = filings_resp.get('filings')
@@ -69,7 +71,7 @@ for filing_date in filings_fmt_dates:
 
 
 earnings_date = mpf.make_addplot(filings_df, type='scatter', markersize=200,marker='^',panel=1)
-fig = mpf.plot(
+fig, ax = mpf.plot(
     data,
     addplot=earnings_date,
     returnfig=True
