@@ -19,7 +19,7 @@ today = datetime.date.today()
 def user_input_features():
     ticker = st.sidebar.text_input("Ticker", 'PKK.CN')
     webticker = st.sidebar.text_input("Web Ticker", 'PKK.CNX')
-    start_date = st.sidebar.text_input("Start Date", '2019-01-01')
+    start_date = st.sidebar.text_input("Start Date", '2014-01-01')
     end_date = st.sidebar.text_input("End Date", f'{today}')
     return ticker, webticker, start_date, end_date
 
