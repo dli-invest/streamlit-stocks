@@ -1,4 +1,4 @@
-# streamlit-stocks
+# streamlit-stocks [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dli-invest/streamlit-stocks/main/stocks_docs/app.py)
 Streamlit apps to visualize stocks
 
 To install
